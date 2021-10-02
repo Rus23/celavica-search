@@ -1,0 +1,36 @@
+{
+  "name": "cyrillic-search",
+  "version": "0.1.0",
+  "description": "Cyrillic search that allows you to write Celavica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/cyrillic-search.js",
+    "dev": "nodemon src/cyrillic-search.ts",
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavle-doby/cyrillic-search.git"
+  },
+  "keywords": [
+    "cyrillic",
+    "search",
+    "celavica",
+    "latin",
+    "includes",
+    "indexOf"
+  ],
+  "author": "pavle-doby",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pavle-doby/cyrillic-search/issues"
+  },
+  "homepage": "https://github.com/pavle-doby/cyrillic-search#readme",
+  "devDependencies": {
+    "@types/node": "^16.10.2",
+    "nodemon": "^2.0.13",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  }
+}
