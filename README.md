@@ -25,7 +25,7 @@ Last one is `false` because functions are Case Sensitive.
 
 ## Installation
 
-npm i cyrillic-latin-search
+`npm i cyrillic-latin-search`
 
 ## Usage
 

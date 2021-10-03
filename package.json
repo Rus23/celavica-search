@@ -1,8 +1,8 @@
 {
   "name": "cyrillic-latin-search",
-  "version": "0.2.0",
-  "description": "Cyrillic search that allows you to write Celavica",
-  "main": "index.js",
+  "version": "0.3.0",
+  "description": "Cyrillic Latin Search is convenient for Cyrillic Latin search engines because you can write 'Celavica' ('Bald letters') 'c' for 'č', 's' for 'š', 'и' for 'й',...",
+  "main": "src/cyrillic-latin-search.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/cyrillic-latin-search.js",
@@ -14,12 +14,24 @@
     "url": "git+https://github.com/pavle-doby/cyrillic-latin-search.git"
   },
   "keywords": [
+    "cyrillic-latin-search",
+    "cyrillic-search",
     "cyrillic",
-    "search",
-    "celavica",
+    "latin-search",
     "latin",
+    "celavica-search",
+    "celavica",
+    "slav-search",
+    "slav",
+    "iso 9",
+    "find",
+    "contains",
+    "search",
     "includes",
-    "indexOf"
+    "indexOf",
+    "russian",
+    "serbian",
+    "ukrainian"
   ],
   "author": "pavle-doby",
   "license": "MIT",
