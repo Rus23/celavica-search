@@ -2,7 +2,7 @@
 
 Cyrillic Latin Search is convenient for Cyrillic Latin search engines because you can write "Celavica" ("Bald letters") "c" for "č", "s" for "š", "и" for "й",...
 
-### Supports ISO 9 standard
+[Supports ISO 9 standard](https://en.wikipedia.org/wiki/ISO_9)
 
 ## Examples
 
@@ -13,7 +13,6 @@ Cyrillic Latin Search is convenient for Cyrillic Latin search engines because yo
 | Šišmiš  | Sismis   | true     |
 | čeljavo | Celjavo  | false    |
 
-Last one is `false` because functions are Case Sensitive.
 <br>
 
 | Cyrillic | Celavica | includes |
@@ -23,18 +22,24 @@ Last one is `false` because functions are Case Sensitive.
 | Хороший  | Хорошии  | true     |
 | Добрий   | добрии   | false    |
 
+The last ones are `false` because functions are Case Sensitive.
+
 ## Installation
 
-`npm i cyrillic-latin-search`
+```console
+npm i cyrillic-latin-search
+# or
+yarn add cyrillic-latin-search
+```
 
 ## Usage
 
-```
-import { includes, indexOf, setDefaultAlphabet } from "./cyrillic-latin-search";
+```ts
+import { includes, indexOf, setDefaultAlphabet } from "cyrillic-latin-search";
 
 // latin search
-includes("Lep je grad, Niš", "Nis") // => true
-indexOf("Lep je grad, Niš", "Nis") // => 13
+includes("Lep je grad, Niš", "Nis"); // => true
+indexOf("Lep je grad, Niš", "Nis"); // => 13
 
 // cyrillic search
 includes("Привет мой друг", "мои", "cyrillic"); // => true
@@ -44,32 +49,50 @@ indexOf("Привет мой друг", "мои"); // => 7
 
 ## Documentation
 
-Returns `true` if `searchString` appears as a substring in `string`.
+> **Default alphabet** is **latin**. But you can change that with function _setDefaultAlphabet_
 
-> includes(string: string, searchString: string, alphabet: "cyrillic" | "latin"): boolean
+#### Functions
 
-Returns the `position` of the first occurrence of a `searchString` or `-1` if `searchString` is not occurring in `string`;
+Returns `true` if `searchString` appears as a substring in string `str`.
 
-> indexOf(string: string, searchString: string, alphabet: "cyrillic" | "latin"): number
+```ts
+includes(str: string, searchString: string, alphabet?: "cyrillic" | "latin"): boolean
+```
+
+Returns the `position` of the first occurrence of a `searchString` or `-1` if `searchString` is not occurring in string `str`;
+
+```ts
+indexOf(str: string, searchString: string, alphabet?: "cyrillic" | "latin"): number
+```
 
 Sets `defaultAlphabet` witch is used by other functions.
 Valid values are: `"cyrillic"` or `"latin"`.
+If you don't pass an argument `defaultAlphabet` will be set to `"latin"`.
 
-> setDefaultAlphabet(alphabet: "cyrillic" | "latin"): void
+```ts
+setDefaultAlphabet(alphabet?: "cyrillic" | "latin"): void
+```
 
 Gets `defaultAlphabet` witch is used by other functions.
+By default this will return `"latin"`
 
-> getDefaultAlphabet(): string
+```ts
+getDefaultAlphabet(): string
+```
 
-Converts `string` to Celavica depending on `defaultAlphabet` or passed argument. <br>
+Converts string `str` to Celavica depending on `defaultAlphabet` or passed argument `alphabet`. <br>
 (eg.) <br>
 // for alphabet = "latin" <br>
 Niš -> Nis, <br>
 // for alphabet = "cyrillic" <br>
 Хороший -> Хорошии
 
-> convertToCelavica(string: string, alphabet: "cyrillic" | "latin"): string
+```ts
+convertToCelavica(str: string, alphabet?: "cyrillic" | "latin"): string
+```
 
 Gets dictionary that is used for conversion from `Cyrillic/Latin` to `Celavica` based on `alphabet`.
 
-> getDict(alphabet: "cyrillic" | "latin"): Record<string, string>
+```ts
+getDict(alphabet?: "cyrillic" | "latin"): Record<string, string>
+```
