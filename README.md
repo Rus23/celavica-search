@@ -22,12 +22,14 @@ Cyrillic Latin Search is convenient for Cyrillic Latin search engines because yo
 | Хороший  | Хорошии  | true     |
 | Добрий   | добрии   | false    |
 
+<br>
+
 The last ones are `false` because functions are Case Sensitive.
 
 ## Installation
 
-```console
-npm i cyrillic-latin-search
+```bash
+npm install cyrillic-latin-search
 # or
 yarn add cyrillic-latin-search
 ```
@@ -51,26 +53,47 @@ indexOf("Привет мой друг", "мои"); // => 7
 
 > **Default alphabet** is **latin**. But you can change that with function _setDefaultAlphabet_
 
-#### Functions
+### Types
+
+```ts
+type Alphabet = "cyrillic" | "latin";
+```
+
+### Functions
 
 Returns `true` if `searchString` appears as a substring in string `str`.
 
 ```ts
-includes(str: string, searchString: string, alphabet?: "cyrillic" | "latin"): boolean
+includes(str: string, searchString: string, alphabet?: Alphabet): boolean
 ```
 
 Returns the `position` of the first occurrence of a `searchString` or `-1` if `searchString` is not occurring in string `str`;
 
 ```ts
-indexOf(str: string, searchString: string, alphabet?: "cyrillic" | "latin"): number
+indexOf(
+  str: string,
+  searchString: string,
+  alphabet?: Alphabet,
+  position?: number // The index at which to begin searching the searchString. By default starts from beginning.
+): number;
+```
+
+Finding all the occurrences of an `searchString` in `str` and returning array of `positions` or `empty array` if it is not present.
+
+```ts
+allIndexOf(
+  str: string,
+  searchString: string,
+  alphabet?: Alphabet,
+  position?: number // The index at which to begin searching the searchString. By default starts from beginning.
+): number[]
 ```
 
 Sets `defaultAlphabet` witch is used by other functions.
 Valid values are: `"cyrillic"` or `"latin"`.
-If you don't pass an argument `defaultAlphabet` will be set to `"latin"`.
 
 ```ts
-setDefaultAlphabet(alphabet?: "cyrillic" | "latin"): void
+setDefaultAlphabet(alphabet: Alphabet): void
 ```
 
 Gets `defaultAlphabet` witch is used by other functions.
@@ -88,11 +111,11 @@ Niš -> Nis, <br>
 Хороший -> Хорошии
 
 ```ts
-convertToCelavica(str: string, alphabet?: "cyrillic" | "latin"): string
+convertToCelavica(str: string, alphabet?: Alphabet): string
 ```
 
 Gets dictionary that is used for conversion from `Cyrillic/Latin` to `Celavica` based on `alphabet`.
 
 ```ts
-getDict(alphabet?: "cyrillic" | "latin"): Record<string, string>
+getDict(alphabet?: Alphabet): Record<string, string>
 ```
