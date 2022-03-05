@@ -1,6 +1,6 @@
 {
   "name": "cyrillic-latin-search",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Cyrillic Latin Search is convenient for Cyrillic Latin search engines because you can write 'Celavica' ('Bald letters') 'c' for 'č', 's' for 'š', 'и' for 'й',...",
   "main": "dist/cyrillic-latin-search.js",
   "types": "dist/cyrillic-latin-search.d.ts",
@@ -22,6 +22,7 @@
     "latin",
     "celavica-search",
     "celavica",
+    "word",
     "slav-search",
     "slav",
     "iso 9",
@@ -45,7 +46,8 @@
     "латинська",
     "поиск",
     "петрага",
-    "пошук"
+    "пошук",
+    "ћелавица"
   ],
   "author": "pavle-doby",
   "license": "MIT",

@@ -1,6 +1,6 @@
 # cyrillic-latin-search
 
-Cyrillic Latin Search is convenient for Cyrillic Latin search engines because you can write "Celavica" ("Bald letters") "c" for "č", "s" for "š", "и" for "й",...
+**Cyrillic Latin Search** is convenient for Cyrillic Latin search engines because you can write **"Celavica"** ("Bald letters") "c" for "č", "s" for "š", "и" for "й",...
 
 [Supports ISO 9 standard](https://en.wikipedia.org/wiki/ISO_9)
 
