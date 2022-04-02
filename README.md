@@ -1,4 +1,4 @@
-# cyrillic-latin-search
+# cyrillic-latin-search 🔤
 
 **Cyrillic Latin Search** is convenient for Cyrillic Latin search engines because you can write **"Celavica"** ("Bald letters") "c" for "č", "s" for "š", "и" for "й",...
 
