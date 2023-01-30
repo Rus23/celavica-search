@@ -61,47 +61,75 @@ type Alphabet = "cyrillic" | "latin";
 
 ### Functions
 
+<details>
+<summary>Description</summary>
+
 Returns `true` if `searchString` appears as a substring in string `str`.
+
+</details>
 
 ```ts
 includes(str: string, searchString: string, alphabet?: Alphabet): boolean
 ```
 
-Returns the `position` of the first occurrence of a `searchString` or `-1` if `searchString` is not occurring in string `str`;
+<details>
+<summary>Description</summary>
+
+Returns the `position` of the first occurrence of a `searchString` or `-1` if `searchString` is not occurring in string `str`.
+
+</details>
 
 ```ts
 indexOf(
   str: string,
   searchString: string,
   alphabet?: Alphabet,
-  position?: number // The index at which to begin searching the searchString. By default starts from beginning.
+  position?: number // start of the search (by default 0)
 ): number;
 ```
 
+<details>
+<summary>Description</summary>
+
 Finding all the occurrences of an `searchString` in `str` and returning array of `positions` or `empty array` if it is not present.
+
+</details>
 
 ```ts
 allIndexOf(
   str: string,
   searchString: string,
   alphabet?: Alphabet,
-  position?: number // The index at which to begin searching the searchString. By default starts from beginning.
+  position?: number // start of the search (by default 0)
 ): number[]
 ```
 
+<details>
+<summary>Description</summary>
+
 Sets `defaultAlphabet` witch is used by other functions.
 Valid values are: `"cyrillic"` or `"latin"`.
+
+</details>
 
 ```ts
 setDefaultAlphabet(alphabet: Alphabet): void
 ```
 
+<details>
+<summary>Description</summary>
+
 Gets `defaultAlphabet` witch is used by other functions.
 By default this will return `"latin"`
+
+</details>
 
 ```ts
 getDefaultAlphabet(): string
 ```
+
+<details>
+<summary>Description</summary>
 
 Converts string `str` to Celavica depending on `defaultAlphabet` or passed argument `alphabet`. <br>
 (eg.) <br>
@@ -110,11 +138,18 @@ Niš -> Nis, <br>
 // for alphabet = "cyrillic" <br>
 Хороший -> Хорошии
 
+</details>
+
 ```ts
 convertToCelavica(str: string, alphabet?: Alphabet): string
 ```
 
+<details>
+<summary>Description</summary>
+
 Gets dictionary that is used for conversion from `Cyrillic/Latin` to `Celavica` based on `alphabet`.
+
+</details>
 
 ```ts
 getDict(alphabet?: Alphabet): Record<string, string>
