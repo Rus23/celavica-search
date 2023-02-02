@@ -14,7 +14,7 @@ let defaultAlphabet: Alphabet = "latin";
  * @param {string} fnName
  */
 function checkAlphabet(alphabet: Alphabet, fnName: string = ""): void {
-  if (alphabetList.includes(alphabet)) {
+  if ((alphabetList).includes(alphabet)) {
     return;
   }
 
